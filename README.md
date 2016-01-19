@@ -25,13 +25,6 @@ Swiftの入門用プロジェクト。50行ほどのコードで電卓アプリ�
 
 #### オプショナル型
 Swiftのコードでは各所に!,?がつきます。これはオプショナル型なるものの処理のためです。
-
-オプショナル型については、説明すると長くなるので、はじめての方は気にせずサンプル通り書くとよいです。解説記事リンクを上げておきます。
+オプショナル型とは何か、その処理の方法については、解説記事リンクを上げておきます。
 
 * http://qiita.com/cotrpepe/items/518c4476ca957a42f5f1
-* http://www.dictav.info/2014/12/15/Swift-AC-%2314---Optional.html
-
-### Swift Coffee
-Swiftで[自由に作る会](https://www.facebook.com/swiftcoffeebu)を渋谷で始めました。
-
-第2・4金曜夜、渋谷のコワーキングPoRTAL Shibuyaにて。

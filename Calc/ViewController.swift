@@ -70,7 +70,10 @@ class ViewController: UIViewController {
     
     // ディスプレイ表示を取得しIntに変換して返す
     func getDisplayInt() -> Int {
-        guard let displayText = display.text else { return 0 }
-        return Int(displayText) ?? 0
+        if let displayText = display.text {
+            return Int(displayText) ?? 0
+        } else {
+            return 0
+        }
     }
 }
