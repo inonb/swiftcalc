@@ -8,7 +8,7 @@ class ViewController: UIViewController {
      */
     
     var isTypingNumber = false  // 数字をタイプ中か
-    var bufferNumber : Int! = 0  // 計算中の数値
+    var bufferNumber : Int = 0  // 計算中の数値
     var nextOperation : String?   // 次に演算する操作　+, -
     
     @IBOutlet weak var display: UILabel!    // 結果を表示するラベル
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     // 数字キーが押されたとき
     @IBAction func digit(sender: UIButton) {
         // ログに表示
-        println("pushed \(sender.currentTitle)")
+        print("pushed \(sender.currentTitle)")
         
         if isTypingNumber {
             let digit = sender.currentTitle!
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     // 操作キー（+-=C）が押されたとき
     @IBAction func operation(sender: UIButton) {
         // ログに表示
-        println("pushed \(sender.currentTitle)")
+        print("pushed \(sender.currentTitle)")
         
         if sender.currentTitle == "C" {
             bufferNumber = 0
@@ -43,13 +43,13 @@ class ViewController: UIViewController {
         } else {
             if nextOperation == nil {
             //はじめて演算キーを押したとき
-                bufferNumber = displayInt()
+                bufferNumber = getDisplayInt()
             } else if nextOperation == "+" {
             //前回+を押したとき
-                bufferNumber = bufferNumber + displayInt()
+                bufferNumber = bufferNumber + getDisplayInt()
             } else if nextOperation == "-" {
             //前回-を押したとき
-                bufferNumber = bufferNumber - displayInt()
+                bufferNumber = bufferNumber - getDisplayInt()
             }
             
             // 実際の計算は次のキーを押した時なので、演算の種類をとっておく
@@ -68,12 +68,9 @@ class ViewController: UIViewController {
         }
     }
     
-    // 表示されている結果を数値で返す
-    func displayInt() -> Int {
-        if let displayInt : Int = display.text?.toInt() {
-            return displayInt
-        } else {
-            return 0
-        }
+    // ディスプレイ表示を取得しIntに変換して返す
+    func getDisplayInt() -> Int {
+        guard let displayText = display.text else { return 0 }
+        return Int(displayText) ?? 0
     }
 }

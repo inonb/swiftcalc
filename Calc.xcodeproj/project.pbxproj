@@ -150,6 +150,8 @@
 		DBDB19351A8601200005D26B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Tidal Web";
 				TargetAttributes = {
@@ -389,6 +391,7 @@
 				DBDB195E1A8601200005D26B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBDB195F1A8601200005D26B /* Build configuration list for PBXNativeTarget "CalcTests" */ = {
 			isa = XCConfigurationList;
@@ -397,6 +400,7 @@
 				DBDB19611A8601200005D26B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
